@@ -23,6 +23,20 @@ public class BallDemo
         myCanvas = new Canvas("Ball Demo", 600, 500);
     }
 
+    public void boxBounce()
+    {
+        myCanvas.setVisible(true);
+        
+        BoxBounce myBoxBall = new BoxBounce(10,10, 30,
+                                    Color.magenta, myCanvas);
+        
+        boolean finished = false;
+        while(!finished) {
+            myCanvas.wait(50);
+            myBoxBall.move();
+            }
+        }  
+    
     /**
      * Simulate two bouncing balls
      */
